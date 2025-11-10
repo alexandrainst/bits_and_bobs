@@ -6,22 +6,15 @@ Usage:
 
 from pathlib import Path
 
-import click
-
 # List of all the environment variables that are desired
 DESIRED_ENVIRONMENT_VARIABLES = dict(
     GIT_NAME="Enter your full name, to be shown in Git commits:\n> ",
     GIT_EMAIL="Enter your email, as registered on your Github account:\n> ",
+    PYPI_API_TOKEN="Enter your PyPI API token (leave blank if not publishing to "
+    "PyPI):\n> ",
 )
 
 
-@click.command()
-@click.option(
-    "--non-interactive",
-    is_flag=True,
-    default=False,
-    help="If set, the script will not ask for user input.",
-)
 def fix_dot_env_file(non_interactive: bool) -> None:
     """Ensures that the .env file exists and contains all desired variables.
 
@@ -76,4 +69,15 @@ def fix_dot_env_file(non_interactive: bool) -> None:
 
 
 if __name__ == "__main__":
-    fix_dot_env_file()
+    from argparse import ArgumentParser
+
+    parser = ArgumentParser()
+    parser.add_argument(
+        "--non-interactive",
+        const=True,
+        nargs="?",
+        default=False,
+        help="If set, the script will not ask for user input.",
+    )
+    args = parser.parse_args()
+    fix_dot_env_file(non_interactive=args.non_interactive)
