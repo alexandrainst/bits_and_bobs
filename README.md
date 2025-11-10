@@ -15,7 +15,7 @@
 General utility functions with no dependencies.
 
 ______________________________________________________________________
-[![Code Coverage](https://img.shields.io/badge/Coverage-0%25-red.svg)](https://github.com/alexandrainst/bits_and_bobs/tree/main/tests)
+[![Code Coverage](https://img.shields.io/badge/Coverage-81%25-yellowgreen.svg)](https://github.com/alexandrainst/bits_and_bobs/tree/main/tests)
 [![Documentation](https://img.shields.io/badge/docs-passing-green)](https://alexandrainst.github.io/bits_and_bobs)
 [![License](https://img.shields.io/github/license/alexandrainst/bits_and_bobs)](https://github.com/alexandrainst/bits_and_bobs/blob/main/LICENSE)
 [![LastCommit](https://img.shields.io/github/last-commit/alexandrainst/bits_and_bobs)](https://github.com/alexandrainst/bits_and_bobs/commits/main)
