@@ -79,13 +79,6 @@ setup-git:
 test:  ## Run tests
 	@uv run pytest && uv run readme-cov
 
-docker:  ## Build Docker image and run container
-	@docker build -t bits_and_bobs .
-	@docker run -it --rm bits_and_bobs
-
-tree:  ## Print directory tree
-	@tree -a --gitignore -I .git .
-
 check:  ## Lint, format, and type-check the code
 	@uv run pre-commit run --all-files
 
