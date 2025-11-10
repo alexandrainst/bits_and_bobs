@@ -10,9 +10,7 @@ maintainers = [
     {name = "Dan Saattrup Smart", email = "dan.smart@alexandra.dk"},
 ]
 requires-python = ">=3.11,<4.0"
-dependencies = [
-    "hydra-core>=1.3.2",
-]
+dependencies = []
 
 [project.urls]
 Repository = "https://github.com/alexandrainst/bits_and_bobs"
@@ -30,12 +28,7 @@ dev = [
     "click>=8.2.1",
     "ruff>=0.13.2",
     "mypy>=1.18.2",
-    "nbstripout>=0.8.1",
     "coverage>=7.10.5",
-    "mkdocs-material>=9.6.18",
-    "mkdocs-include-markdown-plugin>=7.1.6",
-    "mkdocs-include-dir-to-nav>=1.2.0",
-    "mkapi>=4.4.5",
     "pip>=25.0.1",
 ]
 
