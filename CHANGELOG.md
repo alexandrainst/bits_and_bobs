@@ -7,6 +7,8 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 
 ## [Unreleased]
 
+## [v0.2.0] - 2025-11-11
+
 ## Added
 
 Added a `timeout` context manager, which can be used to limit the execution time of a
