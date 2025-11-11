@@ -7,6 +7,12 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 
 ## [Unreleased]
 
+## Added
+
+Added a `timeout` context manager, which can be used to limit the execution time of a
+block of code. If the block exceeds the specified time limit, a `TimeoutError` is
+raised.
+
 ## [v0.1.0] - 2025-11-10
 
 ## Added
