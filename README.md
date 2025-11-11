@@ -119,3 +119,22 @@ WARNING:logger1:This will be printed
 >>>
 >>> logger2.warning("This will NOT be printed")
 ```
+
+### `timeout`
+
+This context manager limits the execution time of a block of code. If the block
+exceeds the specified time limit, a `TimeoutError` is raised. This is useful for
+preventing long-running operations from hanging your program.
+
+Here is an example of how to use it:
+
+```python
+>>> import bits_and_bobs as bnb
+>>> import time
+>>> try:
+...  with bnb.timeout(seconds=2):
+...   time.sleep(3)  # This will take longer than 2 seconds
+... except TimeoutError:
+...  print("The operation timed out!")
+The operation timed out!
+```
