@@ -16,7 +16,6 @@ General utility functions with no dependencies.
 
 ______________________________________________________________________
 [![Code Coverage](https://img.shields.io/badge/Coverage-83%25-yellowgreen.svg)](https://github.com/alexandrainst/bits_and_bobs/tree/main/tests)
-[![Documentation](https://img.shields.io/badge/docs-passing-green)](https://alexandrainst.github.io/bits_and_bobs)
 [![License](https://img.shields.io/github/license/alexandrainst/bits_and_bobs)](https://github.com/alexandrainst/bits_and_bobs/blob/main/LICENSE)
 [![LastCommit](https://img.shields.io/github/last-commit/alexandrainst/bits_and_bobs)](https://github.com/alexandrainst/bits_and_bobs/commits/main)
 [![Contributor Covenant](https://img.shields.io/badge/Contributor%20Covenant-2.0-4baaaa.svg)](https://github.com/alexandrainst/bits_and_bobs/blob/main/CODE_OF_CONDUCT.md)
@@ -90,11 +89,11 @@ This will be printed
 >>> # We can specify a condition that disables the suppression
 >>> def print_if_debug():
 ...  with bnb.no_terminal_output(disable_condition=lambda: os.getenv("DEBUG") == "1"):
-...   print("This will be printed only if DEBUG=1")
+...   print("This will be printed only if DEBUG is not 1")
 >>> print_if_debug()
+This will be printed only if DEBUG is not 1
 >>> os.environ["DEBUG"] = "1"
 >>> print_if_debug()
-This will be printed only if DEBUG=1
 ```
 
 ### `only_allow_specific_loggers`
